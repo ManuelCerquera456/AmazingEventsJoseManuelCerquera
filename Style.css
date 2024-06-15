@@ -5,16 +5,15 @@ body {
     margin: 0;
 }
 
-
 .card{
     border: 2px solid;
 }
 
 .card-text1 {
-    font-size: 20px; /* Tamaño de fuente */
-    color: #333; /* Color del texto */
-    line-height: 1.5; /* Altura de línea para mejor legibilidad */
-    margin-top: 20px; /* Espaciado superior */
+    font-size: 20px; 
+    color: #333; 
+    line-height: 1.5; 
+    margin-top: 20px; 
 }
 .card-img-top{
     height: 50%;
@@ -47,4 +46,16 @@ h5 {
     padding: 10px;
     width: 100%;
     margin-top: auto; 
+}
+.col{
+    border: 2px solid black;
+}
+
+
+.row .colt {
+    font-size: large;
+    font-weight: bold;
+    background-color: #9d9c9c;
+    border: 2px solid black;
+    
 }
