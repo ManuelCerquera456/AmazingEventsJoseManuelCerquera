@@ -7,15 +7,32 @@ body {
 
 
 .card{
-    border: 1px solid;
+    border: 2px solid;
+}
+
+.card-text1 {
+    font-size: 20px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+    margin-top: 20px; /* Espaciado superior */
 }
 .card-img-top{
     height: 50%;
+}
+.img-fluid{
+    width: 100%;
+    height: 100%;
 }
 
 .precio {
     display: flex;
     justify-content: space-around;
+}
+.mdetails{
+    margin-top: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+  
 }
 
 h5 {
