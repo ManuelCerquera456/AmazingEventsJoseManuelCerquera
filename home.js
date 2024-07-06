@@ -83,7 +83,7 @@ const data = {
         {
             _id: "639c723c992482e5f2834bf5",
             name: "Metallica in concert",
-            image: "https://i.postimg.cc/52j2QfMh/metallica-concert.jpg",
+            image: "https://i.postimg.cc/PrMJ0ZMc/Metallica-in-concert.jpg",
             date: "2022-01-22",
             description: "The only concert of the most emblematic band in the world.",
             category: "Music Concert",
