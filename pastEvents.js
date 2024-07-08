@@ -206,7 +206,7 @@ const data = {
   console.log("Fecha actual:", currentDate);
 
   
-  contenedor.innerHTML = '';
+  
 
   let eventosFiltrados = [];
 
