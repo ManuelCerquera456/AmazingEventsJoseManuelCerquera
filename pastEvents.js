@@ -194,27 +194,49 @@ const data = {
       },
     ],
   };
-function pintarTarjetas(eventos) {
+
+  function pintarTarjetas(eventos) {
     let contenedor = document.getElementById("contenedorTarjetas");
+    if (!contenedor) {
+      console.error("No se encontró el contenedor 'contenedorTarjetas'.");
+      return;
+  }
 
-    let currentDate = (data.currentDate);
-    let eventosFiltrados = eventos.filter(evento => (evento.date) < currentDate);
-    eventosFiltrados.forEach(evento => {
-        let tarjeta = document.createElement("div");
-        tarjeta.className = "card";
-        tarjeta.innerHTML = `
-            <img src="${evento.image}" class="card-img-top" alt="${evento.name} Image">
-            <div class="card-body">
-                <h5 class="card-title">${evento.name}</h5>
-                <p class="card-text">${evento.description}</p>
-                <div class="precio">
-                    <p>Price: $${evento.price}</p>
-                    <a href="./Details.html" class="btn btn-primary">Details</a>
-                </div>
-            </div>`;
+  let currentDate = new Date(data.currentDate); 
+  console.log("Fecha actual:", currentDate);
 
-        contenedor.appendChild(tarjeta);
-    });
+  
+  contenedor.innerHTML = '';
+
+  let eventosFiltrados = [];
+
+  
+  for (let i = 0; i < eventos.length; i++) {
+      let eventoDate = new Date(eventos[i].date);
+      if (eventoDate < currentDate) {
+          eventosFiltrados.push(eventos[i]);
+      }
+  }
+  console.log("Eventos filtrados:", eventosFiltrados);
+for (let i = 0; i < eventosFiltrados.length; i++) {
+    let evento = eventosFiltrados[i];
+
+    let tarjeta = document.createElement("div");
+    tarjeta.className = "card";
+    tarjeta.innerHTML = `
+        <img src="${evento.image}" class="card-img-top" alt="${evento.name} Image">
+        <div class="card-body">
+            <h5 class="card-title">${evento.name}</h5>
+            <p class="card-text">${evento.description}</p>
+            <div class="precio">
+                <p>Price: $${evento.price}</p>
+                <a href="./Details.html" class="btn btn-primary">Details</a>
+            </div>
+        </div>`;
+
+    contenedor.appendChild(tarjeta);
+}
+
 }
 
 pintarTarjetas(data.events);
